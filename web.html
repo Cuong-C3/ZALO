@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zalo Extractor — Hevin Create</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/coding.css" />
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-w-[360px] p-4 select-text space-y-4" style="min-width:360px;">
+
+  <!-- Header -->
+  <header class="text-center">
+    <h1 class="text-2xl font-extrabold tracking-tight rainbow-bg">Zalo User Info</h1>
+    <p class="text-xs text-gray-500 mt-1">Thu thập thông tin cục bộ từ phiên làm việc</p>
+  </header>
+
+  <!-- Data Cards -->
+  <main class="space-y-3">
+
+    <!-- IMEI Card -->
+    <section class="bg-white rounded-2xl shadow-md border border-gray-100 p-4">
+      <h2 class="text-sm font-bold text-gray-600 mb-2">IMEI</h2>
+      <div class="relative">
+        <input id="imei" readonly placeholder="Đang lấy IMEI..."
+               class="w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-400 px-3 py-2 text-sm bg-gray-50 shadow-inner" />
+        <button id="btn-copy-imei"
+                class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 text-xs rounded-lg border border-indigo-200 hover:bg-indigo-50 transition button-primary">
+          Sao chép
+        </button>
+      </div>
+    </section>
+
+    <!-- Cookies Card -->
+    <section class="bg-white rounded-2xl shadow-md border border-gray-100 p-4">
+      <h2 class="text-sm font-bold text-gray-600 mb-2">Cookies</h2>
+      <textarea id="cookies" rows="3" readonly placeholder="Đang lấy Cookie..."
+                class="w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-400 px-3 py-2 text-sm bg-gray-50 shadow-inner resize-y"></textarea>
+      <div class="flex justify-end mt-2">
+        <button id="btn-copy-cookies"
+                class="px-3 py-1 text-xs rounded-lg border border-indigo-200 hover:bg-indigo-50 transition button-primary">
+          Sao chép Cookie
+        </button>
+      </div>
+    </section>
+
+    <!-- User Agent Card -->
+    <section class="bg-white rounded-2xl shadow-md border border-gray-100 p-4">
+      <h2 class="text-sm font-bold text-gray-600 mb-2">User-Agent</h2>
+      <div class="relative">
+        <input id="user-agent" readonly placeholder="Đang lấy User-Agent..."
+               class="w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-400 px-3 py-2 text-sm bg-gray-50 shadow-inner" />
+        <button id="btn-copy-ua"
+                class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 text-xs rounded-lg border border-indigo-200 hover:bg-indigo-50 transition button-primary">
+          Copy UA
+        </button>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section class="bg-white rounded-2xl shadow-md border border-gray-100 p-3 text-center">
+      <button id="refresh-button"
+              class="rf-page w-full text-sm font-semibold px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-50 transition">
+        🔄 Tải lại trang
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center space-y-1">
+    <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
+      <span>Phiên bản:</span>
+      <span id="version" class="font-semibold">1.1.3</span>
+      <button id="update-btn" style="display:none" class="rainbow-bg text-[11px] font-semibold px-3 py-1 rounded-lg border border-indigo-200 hover:bg-indigo-50 transition">
+        (latest)
+      </button>
+    </div>
+    <p class="text-[11px] text-gray-400">UI tinh chỉnh bởi <strong>Sơn Hevin</strong></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/ex.js"></script>
+  <script src="./js/ten.js"></script>
+    <script type="module" src="./scripts/entry.js"></script>
+</body>
+</html>

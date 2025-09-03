@@ -1,0 +1,59 @@
+.button-primary {
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+
+/* Nhà sáng tạo: Sơn Hevin */
+.rf-page {
+  background-color: #f34569;
+  color: #ffffff;
+}
+
+button:hover {
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+:root {
+  --ring: rgba(99,102,241,0.35);
+}
+input#imei:focus,
+textarea#cookies:focus,
+input#user-agent:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.copy-notification {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  background: #111827;
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity .25s ease;
+  z-index: 9999;
+}
+
+.rainbow-bg {
+  background-image: linear-gradient(90deg,#a78bfa,#60a5fa,#34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body {
+  min-width: 320px;
+  max-width: 100%;
+}
+@media (max-width: 400px) {
+  body {
+    padding: 12px !important;
+  }
+  .bg-white {
+    padding: 16px !important;
+  }
+}

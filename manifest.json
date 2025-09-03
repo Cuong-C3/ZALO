@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "ZALO",
+  "version": "1.1.3",
+  "description": "Get IMEI and Cookies for Zalo account quickly (New Version)",
+  "homepage_url": "https://github.com/Cuong-C3/ZALO",
+  "icons": {
+    "16": "images/Zalo.png",
+    "32": "images/Zalo.png",
+    "64": "images/Zalo.png",
+    "128": "images/Zalo.png",
+    "192": "images/Zalo.png",
+    "384": "images/Zalo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "cookies",
+    "storage",
+    "activeTab",
+    "webRequest",
+    "notifications",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://chat.zalo.me/*",
+    "https://raw.githubusercontent.com/*",
+    "https://github.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_icon": {
+      "384": "images/Zalo.png"
+    },
+    "default_popup": "web.html"
+  },
+  "incognito": "spanning"
+}
